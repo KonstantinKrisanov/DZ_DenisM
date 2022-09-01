@@ -22,18 +22,27 @@
 //   }
 
 
-Console.WriteLine("Input number one ");
+//Console.WriteLine("Input number one ");
+//int a = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Input number two ");
+//int b = Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Input number three ");
+//int c = Convert.ToInt32(Console.ReadLine());
+//int Max = a;
+//while (a > Max)
+//   Max = a;
+//while (b > Max)
+//    Max = b;
+//while (c > Max)
+//    Max = c; 
+//    Console.Write("Max =   ");
+//    Console.WriteLine(Max);
+
+
+Console.WriteLine("Input number ");
 int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number two ");
-int b = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("Input number three ");
-int c = Convert.ToInt32(Console.ReadLine());
-int Max = a;
-while (a > Max)
-   Max = a;
-while (b > Max)
-    Max = b;
-while (c > Max)
-    Max = c; 
-    Console.Write("Max =   ");
-    Console.WriteLine(Max);
+if (a % 2 ==0)
+    Console.WriteLine("number is even ");
+    else 
+       Console.WriteLine("number no even ");  
+   
