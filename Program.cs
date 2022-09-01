@@ -39,10 +39,19 @@
 //    Console.WriteLine(Max);
 
 
+//Console.WriteLine("Input number ");
+// int a = Convert.ToInt32(Console.ReadLine());
+// if (a % 2 ==0)
+//     Console.WriteLine("number is even ");
+//     else 
+//        Console.WriteLine("number no even ");  
+   
+
 Console.WriteLine("Input number ");
 int a = Convert.ToInt32(Console.ReadLine());
-if (a % 2 ==0)
-    Console.WriteLine("number is even ");
-    else 
-       Console.WriteLine("number no even ");  
-   
+int i = 2; 
+while (i <= a)
+{
+Console.Write(i + " ");
+ i = i + 2 ;
+}
