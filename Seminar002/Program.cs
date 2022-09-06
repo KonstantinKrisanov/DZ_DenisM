@@ -114,18 +114,35 @@
 
 //Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
- int GenerateRandomNumbers()
+//  int GenerateRandomNumbers()
+// {
+//     int n = new Random().Next(0, 1000);   // генерирует случайное число в заданном диапозоне
+//     return n;
+// }
+// void OutputOfTheThirdNumber()
+// {
+//     int n = GenerateRandomNumbers();
+//     Console.WriteLine(n);
+//     if (n < 100)
+//        Console.WriteLine("No third digit");
+//     else 
+//         Console.WriteLine(Convert.ToString(n)[2]);
+// }
+// OutputOfTheThirdNumber();
+
+
+//Напишите программу, которая принимает на вход цифру, обозначающую день недели, и проверяет, является ли этот день выходным.
+
+void weekends()
 {
-    int n = new Random().Next(0, 1000);   // генерирует случайное число в заданном диапозоне
-    return n;
+    Console.Write("Input nomber 1 - 7 ");
+int n = Convert.ToInt32(Console.ReadLine());
+
+    if (n > 5)
+        Console.WriteLine("weekends");
+    else
+        Console.WriteLine("Work ");
+    while (n < 1 || n > 7)
+        Console.Write("error");
 }
-void OutputOfTheThirdNumber()
-{
-    int n = GenerateRandomNumbers();
-    Console.WriteLine(n);
-    if (n < 100)
-       Console.WriteLine("No third digit");
-    else 
-        Console.WriteLine(Convert.ToString(n)[2]);
-}
-OutputOfTheThirdNumber();
+weekends();
