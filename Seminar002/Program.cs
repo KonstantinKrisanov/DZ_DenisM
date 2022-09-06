@@ -98,16 +98,34 @@
 // InputNambers();
 
 //   DZ
+
+
 // Напишите программу, которая принимает на вход трёхзначное число и на выходе показывает вторую цифру этого числа.
+// void InputNumber()
+// {
+//     Console.WriteLine("Input number ");
+// int n = Convert.ToInt32(Console.ReadLine());
+//     Console.WriteLine(n);
+//     int a = n / 100;                       
+//     int b = n % 10;
+//     Console.WriteLine(n % 100 / 10);
+// }
+// InputNumber();
 
+//Напишите программу, которая выводит третью цифру заданного числа или сообщает, что третьей цифры нет.
 
-void InputNumber()
+ int GenerateRandomNumbers()
 {
-    Console.WriteLine("Input number ");
-int n = Convert.ToInt32(Console.ReadLine());
-    Console.WriteLine(n);
-    int a = n / 100;                       
-    int b = n % 10;
-    Console.WriteLine(n % 100 / 10);
+    int n = new Random().Next(0, 1000);   // генерирует случайное число в заданном диапозоне
+    return n;
 }
-InputNumber();
+void OutputOfTheThirdNumber()
+{
+    int n = GenerateRandomNumbers();
+    Console.WriteLine(n);
+    if (n < 100)
+       Console.WriteLine("No third digit");
+    else 
+        Console.WriteLine(Convert.ToString(n)[2]);
+}
+OutputOfTheThirdNumber();
