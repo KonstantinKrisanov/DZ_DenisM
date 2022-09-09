@@ -80,13 +80,54 @@
 // DZ
 
 //  Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-void Polindrom()
+// void Polindrom()
+// {
+//  Console.Write("Введите пятизначное число");
+//  double n = Convert.ToInt32(Console.ReadLine());
+// if (Convert.ToString(n)[0] == Convert.ToString(n)[4] && Convert.ToString(n)[1] == Convert.ToString(n)[3])
+//     Console.WriteLine("Полиндром");
+// else
+//     Console.WriteLine("Не полиндром");
+// }
+//  Polindrom();
+
+//Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
+
+// void Distans3D()
+// {
+// Console.WriteLine("Введите координаты первой точки: ");
+// Console.WriteLine("ось X ");
+// int x1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("ось Y ");
+// int y1 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("ось Z ");
+// int z1 = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("ВВведите координаты второй точки: ");
+// Console.WriteLine("ось X ");
+// int x2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("ось Y ");
+// int y2 = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("ось Z ");
+// int z2 = Convert.ToInt32(Console.ReadLine());
+
+// double distance = Math.Sqrt(Math.Pow(x1 - x2, 2) + Math.Pow(y1 - y2, 2) + Math.Pow(z1 - z2, 2));
+
+// Console.WriteLine($"Расстояние между точками {distance}.");
+// }
+// Distans3D();
+
+//Напишите программу, которая принимает на вход число (N) и выдаёт таблицу кубов чисел от 1 до N.
+
+void KybiChisel()
 {
- Console.Write("Введите пятизначное число");
- double n = Convert.ToInt32(Console.ReadLine());
-if (Convert.ToString(n)[0] == Convert.ToString(n)[4] && Convert.ToString(n)[1] == Convert.ToString(n)[3])
-    Console.WriteLine("Полиндром");
-else
-    Console.WriteLine("Не полиндром");
+Console.Write("Введите число");
+int n = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 1; i <= n; i++)
+{
+    Console.Write(Math.Pow(i, 3));
+    Console.Write(" ");
 }
- Polindrom();
+}
+KybiChisel();
