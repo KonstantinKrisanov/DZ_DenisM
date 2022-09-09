@@ -74,3 +74,19 @@
 // int n = Convert.ToInt32(Console.ReadLine());
 // for (int i = 1; i <= n; i++)
 // Console.WriteLine(i + "^2 = " + i * i);
+
+
+
+// DZ
+
+//  Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
+void Polindrom()
+{
+ Console.Write("Введите пятизначное число");
+ double n = Convert.ToInt32(Console.ReadLine());
+if (Convert.ToString(n)[0] == Convert.ToString(n)[4] && Convert.ToString(n)[1] == Convert.ToString(n)[3])
+    Console.WriteLine("Полиндром");
+else
+    Console.WriteLine("Не полиндром");
+}
+ Polindrom();
