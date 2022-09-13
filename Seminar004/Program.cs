@@ -62,15 +62,32 @@
 // DZ
 
 //  Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
-Console.WriteLine("input first number");
+// Console.WriteLine("input first number");
+// int a = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("input sekond number");
+// int b = Convert.ToInt32(Console.ReadLine());
+// int count = 1;
+// int dop = 1;
+// while (b >= count)
+// {
+//     dop = dop * a;
+//     count++;
+// }
+// Console.WriteLine(dop);
+
+
+//Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+Console.WriteLine("input number");
 int a = Convert.ToInt32(Console.ReadLine());
-Console.WriteLine("input sekond number");
-int b = Convert.ToInt32(Console.ReadLine());
-int count = 1;
-int dop = 1;
-while (b >= count)
+int sum = 0;
+if (a > 9)
 {
-    dop = dop * a;
-    count++;
+    while (a > 0)
+    {
+        sum += a % 10;
+        a /= 10;
+    }
+    Console.WriteLine(sum);
 }
-Console.WriteLine(dop);
+else
+  Console.WriteLine("enter a two-digit number");
