@@ -77,17 +77,30 @@
 
 
 //Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
-Console.WriteLine("input number");
-int a = Convert.ToInt32(Console.ReadLine());
-int sum = 0;
-if (a > 9)
+// Console.WriteLine("input number");
+// int a = Convert.ToInt32(Console.ReadLine());
+// int sum = 0;
+// if (a > 9)
+// {
+//     while (a > 0)
+//     {
+//         sum += a % 10;
+//         a /= 10;
+//     }
+//     Console.WriteLine(sum);
+// }
+// else
+//   Console.WriteLine("enter a two-digit number");
+
+
+//  Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран.
+
+int[] array = new int[8];
+Console.WriteLine("Enter 8 array numbers");
+int i = 0;
+while (i < array.Length)
 {
-    while (a > 0)
-    {
-        sum += a % 10;
-        a /= 10;
-    }
-    Console.WriteLine(sum);
+    array[i] = Convert.ToInt32(Console.ReadLine());
+    i++;
 }
-else
-  Console.WriteLine("enter a two-digit number");
+Console.WriteLine("[" + string.Join(", ", array) + "]");
