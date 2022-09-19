@@ -1,0 +1,77 @@
+// Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, которая покажет количество чётных чисел в массиве.
+
+// [345, 897, 568, 234] -> 2
+
+// int[] FillArray(int[] array) //Заполнение случайными трехзначными числами
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(100, 1000);
+//     }
+//     return array;
+// }
+
+// int CountEvenNumbersInArray(int[] array)  // Кол-во четных чисел
+// {
+//     int count = 0;
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         if (array[i] % 2 == 0)
+//             count++;
+//     }
+//     return count;
+// }
+// int[] arr = new int[10];
+// Console.WriteLine("массив [" + string.Join(", ", FillArray(arr)) + "]"); // Красивый вывод
+// Console.WriteLine("четных чисел: " + CountEvenNumbersInArray(arr));
+
+// Задача 36: Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов, стоящих на нечётных позициях.
+// [3, 7, 23, 12] -> 19
+// [-4, -6, 89, 6] -> 0
+// int[] FillArray(int[] array) //Заполнение случайными числами
+// {
+//     for (int i = 0; i < array.Length; i++)
+//     {
+//         array[i] = new Random().Next(-1000, 1000);
+//     }
+//     return array;
+// }
+// int SumOddPositions(int[] array)  // Сумма нечетных чисел
+// {
+//     int sum = 0;
+//     for (int i = 0; i < array.Length; i = i + 2)
+//     {
+//             sum+=array[i];
+//     }
+//     return sum;
+// }
+// int[] arr = new int[10];
+// Console.WriteLine("массив [" + string.Join(", ", FillArray(arr)) + "]"); // Красивый вывод
+// Console.WriteLine("Сумма чисел на нечетных позициях: " + SumOddPositions(arr));
+
+// Задача 38: Задайте массив дробных чисел. Найдите разницу между максимальным и минимальным элементов массива.
+// [3,5 7,78 22 2,23 78, 25] -> 76,02
+double[] arr = new double[10];
+
+double[] FillArray(double[] array)
+{
+   for (int i = 0; i < array.Length; i++)
+    {
+       double randNum = new Random().Next(1000);
+       array[i] = randNum + Convert.ToDouble(new Random().Next(100)) / 100;
+    }
+    return array;
+}
+
+Console.WriteLine("Исходный массив [" + string.Join("; ", FillArray(arr)) + "]");
+double max = arr[0];
+double min = arr[0];
+for (int i = 0; i < arr.Length; i++)
+{
+    if (arr[i] > max) max = arr[i];
+    if (arr[i] < min) min = arr[i];
+}
+double dif = max - min;
+Console.WriteLine("Максимальное  " + max);
+Console.WriteLine ("минимальное  " + min);
+Console.WriteLine("Разница  " + dif);
