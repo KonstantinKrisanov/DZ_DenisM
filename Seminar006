@@ -1,0 +1,175 @@
+// суперсдвиг
+
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] arrayFirst = new int[n];
+// int[] arrayResult = new int[n];
+
+// for (int i = 0; i < arrayFirst.Length; i++)
+// arrayFirst[i] = Convert.ToInt32(Console.ReadLine());
+
+// Console.WriteLine("[" + string.Join(", ", arrayFirst) + "]");
+
+// int k = Convert.ToInt32(Console.ReadLine());
+// k = k % n;
+// if (k > 0)
+// {
+// for (int i = 0; i < k; i++)
+// arrayResult[i] = arrayFirst[arrayFirst.Length - k + i];
+
+// Console.WriteLine("[" + string.Join(", ", arrayResult) + "]");
+
+// for (int i = 0; i < n - k; i++)
+// arrayResult[k + i] = arrayFirst[i];
+// }
+// else
+// {
+// k = (-1) * k;
+// for (int i = 0; i < k; i++)
+// arrayResult[arrayFirst.Length - k + i] = arrayFirst[i];
+
+// Console.WriteLine("[" + string.Join(", ", arrayResult) + "]");
+
+// for (int i = 0; i < n - k; i++)
+// arrayResult[i] = arrayFirst[k + i];
+// }
+
+
+// Console.WriteLine("[" + string.Join(", ", arrayResult) + "]");
+
+// Переворот массива
+
+// void InputArray(int[] array)
+// {
+// for (int i = 0; i < array.Length; i++)
+// array[i] = new Random().Next(1, 10);
+// }
+
+
+// void Reverse(int[] array)
+// {
+// for (int i = 0; i < array.Length / 2; i++)
+// {
+// int x = array[i];
+// array[i] = array[array.Length - i - 1];
+// array[array.Length - i - 1] = x;
+// }
+// }
+
+
+// Console.Write("Введите кол-во элементов массива: ");
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// InputArray(array);
+// Console.WriteLine("[" + string.Join(", ", array) + "]");
+// Reverse(array);
+// Console.WriteLine("[" + string.Join(", ", array) + "]");
+
+
+
+// Существует ли треугольник
+
+// Console.Clear();
+// int a = Convert.ToInt32(Console.ReadLine());
+// int b = Convert.ToInt32(Console.ReadLine());
+// int c = Convert.ToInt32(Console.ReadLine());
+
+// if (a < b + c && b < a + c && c < a + b)
+// Console.WriteLine("yes");
+// else
+// Console.WriteLine("no");
+
+
+
+// перевод числа из десятичной системы изчисления в двоичную
+
+// int n = Convert.ToInt32(Console.ReadLine());
+// string result = "";
+// while (n > 0)
+// {
+// int x = n % 2;
+// result = Convert.ToString(x) + result;
+// n = n / 2;
+// }
+// Console.WriteLine(result);
+
+
+// Числа Фибаначи
+
+// Console.Clear();
+// int n = Convert.ToInt32(Console.ReadLine());
+// int x, a0 = 0, a1 = 1;
+// for (int i = 0; i < n; i++)
+// {
+// Console.Write(a0 + " ");
+// x = a0 + a1;
+// a0 = a1;
+// a1 = x;
+// }
+
+// второй способ к предыдущей задачи
+// Console.Clear();
+// int n = Convert.ToInt32(Console.ReadLine());
+// int[] array = new int[n];
+// array[0] = 0;
+// array[1] = 1;
+// for (int i = 1; i < n - 1; i++)
+// {
+// array[i + 1] = array[i] + array[i - 1];
+// }
+// Console.WriteLine("[" + string.Join(", ", array) + "]");
+
+
+// Копирование массива
+// Console.Clear();
+// int[] array = {1, 2};
+// int[] array1 = new int[array.Length];
+// for (int i = 0; i < array.Length; i++)
+// array1[i] = array[i];
+// array1[0] = 10;
+// Console.WriteLine(string.Join(", ", array));
+// Console.WriteLine(string.Join(", ", array1));
+
+
+
+// DZ
+// Задача 41: Пользователь вводит с клавиатуры M чисел. Посчитайте, сколько чисел больше 0 ввёл пользователь.
+// 0, 7, 8, -2, -2 -> 2
+// 1, -7, 567, 89, 223-> 3
+
+
+// int count = 0;
+// Console.WriteLine("Введите десять  чисел ");
+// int[] a = new int[10];
+// for (int i = 0; i < 10; ++i)
+// {
+//     a[i] = int.Parse(Console.ReadLine());
+// }
+// for (int i = 0; i < 10; ++i)
+// {
+//     if(i > 0)
+//        count++; 
+// }
+// Console.WriteLine("[" + string.Join(", ", a) + "]");
+// Console.WriteLine("чисел больше нуля " + count);
+
+
+
+
+// Задача 43: Напишите программу, которая найдёт точку пересечения двух прямых, заданных уравнениями y = k1 * x + b1, y = k2 * x + b2; значения b1, k1, b2 и k2 задаются пользователем.
+// b1 = 2, k1 = 5, b2 = 4, k2 = 9 -> (-0,5; -0,5)
+
+Console.WriteLine("Введите начало первой линии (b1)");
+double b1 = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите конец первой линии (k1)");
+double k1 = double.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите начало второй линии (b2)");
+double b2 = double.Parse(Console.ReadLine());
+Console.WriteLine("Введите конец второй линии (k2)");
+double k2 =double.Parse(Console.ReadLine());
+
+double x = (b2-b1)/(k1-k2);
+double y = k1*x + b1;
+
+Console.WriteLine($"Координаты точки пересечения прямых ({x}, {y})");
+
